@@ -1,0 +1,138 @@
+﻿
+> lariza-ochoa-ai-marketing@0.1.0 build
+> next build
+
+Ôû▓ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+node.exe : 
+En línea: 1 Carácter: 1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
+    + CategoryInfo         
+     : NotSpecified: (:St  
+  ring) [], RemoteExcept   
+ ion
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 
+> Build error occurred
+Error: Turbopack build 
+failed with 1 errors:
+./app/globals.css
+Error evaluating Node.js 
+code
+CssSyntaxError: C:\Users\la
+riz\OneDrive\Desktop\Antigr
+avity Proyectos\P├ígina 
+Lariza Ochoa AI Marketing\a
+pp\globals.css:48:5: The `s
+hadow-[0_10px_40px_rgba(0,`
+ class does not exist. If `
+shadow-[0_10px_40px_rgba(0,
+` is a custom class, make 
+sure it is defined within 
+a `@layer` directive.
+    at Input.error (node_mo
+dules/postcss/lib/input.js:
+135:16) [C:\Users\lariz\One
+Drive\Desktop\Antigravity 
+Proyectos\P├ígina Lariza 
+Ochoa AI Marketing\.next\bu
+ild\chunks\node_modules_fe6
+93df6._.js:4651:22]
+    at AtRule.error (node_m
+odules/postcss/lib/node.js:
+146:32) [C:\Users\lariz\One
+Drive\Desktop\Antigravity 
+Proyectos\P├ígina Lariza 
+Ochoa AI Marketing\.next\bu
+ild\chunks\node_modules_fe6
+93df6._.js:928:38]
+    [at processApply (C:\Us
+ers\lariz\OneDrive\Desktop\
+Antigravity 
+Proyectos\P├ígina Lariza 
+Ochoa AI Marketing\node_mod
+ules\tailwindcss\lib\lib\ex
+pandApplyAtRules.js:380:29)
+]
+    [at C:\Users\lariz\OneD
+rive\Desktop\Antigravity 
+Proyectos\P├ígina Lariza 
+Ochoa AI Marketing\node_mod
+ules\tailwindcss\lib\lib\ex
+pandApplyAtRules.js:551:9]
+    [at C:\Users\lariz\OneD
+rive\Desktop\Antigravity 
+Proyectos\P├ígina Lariza 
+Ochoa AI Marketing\node_mod
+ules\tailwindcss\lib\proces
+sTailwindFeatures.js:55:50]
+    [at async plugins (C:\U
+sers\lariz\OneDrive\Desktop
+\Antigravity 
+Proyectos\P├ígina Lariza 
+Ochoa AI Marketing\node_mod
+ules\tailwindcss\lib\plugin
+.js:38:17)]
+    at async 
+LazyResult.runAsync (node_m
+odules/postcss/lib/lazy-res
+ult.js:293:11) [C:\Users\la
+riz\OneDrive\Desktop\Antigr
+avity Proyectos\P├ígina 
+Lariza Ochoa AI Marketing\.
+next\build\chunks\node_modu
+les_fe693df6._.js:6206:21]
+    at async transform (tur
+bopack:///[turbopack-node]/
+transforms/postcss.ts:70:34
+) [C:\Users\lariz\OneDrive\
+Desktop\Antigravity 
+Proyectos\P├ígina Lariza 
+Ochoa AI Marketing\.next\bu
+ild\chunks\[root-of-the-ser
+ver]__6d51cb5d._.js:172:36]
+    at async run (turbopack
+:///[turbopack-node]/ipc/ev
+aluate.ts:92:23) [C:\Users\
+lariz\OneDrive\Desktop\Anti
+gravity Proyectos\P├ígina 
+Lariza Ochoa AI Marketing\.
+next\build\chunks\[root-of-
+the-server]__44695d76._.js:
+443:31]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css 
+[Client Component Browser]
+    ./app/layout.tsx 
+[Server Component]
+
+
+    at async transform (tur
+bopack:///[turbopack-node]/
+transforms/postcss.ts:70:34
+) [C:\Users\lariz\OneDrive\
+Desktop\Antigravity 
+Proyectos\P├ígina Lariza 
+Ochoa AI Marketing\.next\bu
+ild\chunks\[root-of-the-ser
+ver]__6d51cb5d._.js:172:36]
+)
+    at async run (turbopack
+:///[turbopack-node]/ipc/ev
+aluate.ts:92:23) [C:\Users\
+lariz\OneDrive\Desktop\Anti
+gravity Proyectos\P├ígina 
+Lariza Ochoa AI Marketing\.
+next\build\chunks\[root-of-
+the-server]__44695d76._.js:
+443:31])

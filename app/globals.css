@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #FF6A3D;
+  --secondary: #7B3FE4;
+  --navy: #1F2A44;
+  --accent-yellow: #FFC247;
+  --gray-dark: #4A4A4A;
+  --light-bg: #F5F5F7;
+  --white: #FFFFFF;
+
+  --section-spacing: clamp(4rem, 10vw, 8rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-outfit), sans-serif;
+  color: var(--secondary);
+  background: var(--light-bg);
+  overflow-x: hidden;
+}
+
+@layer components {
+  .section-padding {
+    @apply py-24 px-4 md:px-8 lg:px-16;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-[1.1] text-secondary;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl text-secondary/60 max-w-2xl font-medium;
+  }
+
+  .btn-cyber {
+    @apply relative overflow-hidden bg-primary text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-1 active:scale-95 flex items-center gap-2;
+  }
+
+  .btn-cyber-outline {
+    @apply relative overflow-hidden border-2 border-primary/50 text-primary font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:bg-primary/5 hover:border-primary flex items-center gap-2;
+  }
+
+  .glass-card {
+    @apply bg-white border border-slate-100 rounded-3xl p-8 hover:border-primary/20 transition-all duration-500;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  }
+
+  .glass-card:hover {
+    box-shadow: 0 20px 50px rgba(212, 112, 74, 0.1);
+  }
+
+  .neon-border {
+    @apply relative;
+  }
+
+  .neon-border::after {
+    content: '';
+    @apply absolute inset-0 rounded-[inherit] border border-primary/10 pointer-events-none;
+  }
+}
+
+/* Gradient text futurista - Adaptado para fondo claro */
+.gradient-text {
+  @apply bg-gradient-to-r from-primary via-accent-yellow to-primary bg-clip-text text-transparent;
+  background-size: 200% auto;
+  animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Blob animado - Adaptado para fondo claro (más sutil) */
+.blob-glow {
+  @apply absolute rounded-full blur-[100px] opacity-10 animate-pulse;
+  background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+}
+
+/* Number counter animation */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.count-up {
+  animation: countUp 0.6s ease-out forwards;
+}
+
+/* Simple Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays */
+.delay-100 {
+  transition-delay: 100ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+
+.delay-300 {
+  transition-delay: 300ms;
+}
+
+.delay-400 {
+  transition-delay: 400ms;
+}
+
+.delay-500 {
+  transition-delay: 500ms;
+}
