@@ -4,10 +4,10 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 
 const projects = [
-    { title: "Gestión Estratégica 1", category: "Social Media", image: "/1.png" },
-    { title: "Gestión Estratégica 2", category: "Social Media", image: "/13.png" },
-    { title: "Gestión Estratégica 3", category: "Social Media", image: "/23.png" },
-    { title: "Gestión Estratégica 4", category: "Social Media", image: "/24.png" },
+    { title: "Gestión Estratégica 1", category: "Social Media", image: "/analysis.png" },
+    { title: "Gestión Estratégica 2", category: "Social Media", image: "/smart.png" },
+    { title: "Gestión Estratégica 3", category: "Social Media", image: "/strategy.png" },
+    { title: "Gestión Estratégica 4", category: "Social Media", image: "/web.png" },
     { title: "Gestión Estratégica 5", category: "Social Media", image: "/4.png" },
     { title: "Gestión Estratégica 6", category: "Social Media", image: "/5.png" },
     { title: "Gestión Estratégica 7", category: "Social Media", image: "/68.png" },
