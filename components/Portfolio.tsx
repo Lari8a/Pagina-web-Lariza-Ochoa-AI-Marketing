@@ -52,7 +52,7 @@ export default function Portfolio() {
                         >
                             <Image
                                 src={project.image}
-                                alt={`${project.title} - Caso de Éxito en ${project.category} por Lariza Ochoa AI Marketing`}
+                                alt={`Proyecto de ${project.title} - Caso de éxito en ${project.category} gestionado por Lariza Ochoa AI Marketing`}
                                 fill
                                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                                 sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 220px"

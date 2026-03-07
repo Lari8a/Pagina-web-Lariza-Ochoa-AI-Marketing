@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
     { label: "Inicio", href: "#" },
+    { label: "Sobre Mí", href: "#sobre-mi" },
     { label: "Lo que Nos Define", href: "#definicion" },
     { label: "Servicios", href: "#servicios" },
     { label: "Portafolio", href: "#portafolio" },
@@ -45,7 +46,7 @@ export default function Navbar() {
                         className="relative z-10 hover:opacity-80 transition-opacity"
                     >
                         <Image
-                            src="/logo-v2.png"
+                            src="/logo-brand.png"
                             alt="Lariza Ochoa AI Marketing"
                             width={600}
                             height={270}

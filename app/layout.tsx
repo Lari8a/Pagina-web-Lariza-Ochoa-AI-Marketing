@@ -17,20 +17,26 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://larizaochoa.ai"), // Placeholder domain
+    icons: {
+        icon: "/icon-brand.png",
+        shortcut: "/icon-brand.png",
+        apple: "/icon-brand.png",
+    },
     title: {
-        default: "Lariza Ochoa AI Marketing | Estrategias con IA que Transforman",
+        default: "Lariza Ochoa AI Marketing | Estrategias con IA en México",
         template: "%s | Lariza Ochoa AI Marketing"
     },
     description:
-        "Agencia líder en marketing con Inteligencia Artificial en México. Gestión estratégica de redes sociales, automatizaciones con IA y diseño web enfocado a resultados.",
+        "Transforma tu negocio con marketing de IA. Expertos en gestión de redes sociales, automatizaciones inteligentes y diseño web estratégico en México.",
     keywords: [
-        "marketing con IA México",
-        "inteligencia artificial marketing",
-        "automatizaciones con IA",
-        "gestión de redes sociales",
-        "agencia digital Guadalajara",
-        "diseño web estratégico",
-        "Lariza Ochoa",
+        "marketing inteligencia artificial méxico",
+        "agencia ia guadalajara",
+        "gestión de redes sociales estratégica",
+        "chatbots para negocios méxico",
+        "automatización de marketing ia",
+        "lariza ochoa marketing",
+        "marketing digital con ia",
+        "diseño web con inteligencia artificial"
     ],
     authors: [{ name: "Lariza Ochoa" }],
     creator: "Lariza Ochoa AI Marketing",
@@ -44,15 +50,15 @@ export const metadata: Metadata = {
         canonical: "/",
     },
     openGraph: {
-        title: "Lariza Ochoa AI Marketing | Potencia tu Negocio con IA",
-        description: "Transformamos tu presencia digital con estrategias de IA de alto impacto. Gestión de redes y automatización.",
+        title: "Lariza Ochoa AI Marketing | Marketing con IA que genera resultados",
+        description: "Potenciamos tu presencia digital con Inteligencia Artificial. Estrategias avanzadas en redes sociales y automatización.",
         url: "https://larizaochoa.ai",
         siteName: "Lariza Ochoa AI Marketing",
         locale: "es_MX",
         type: "website",
         images: [
             {
-                url: "/og-image.png", // Recommended to have this asset
+                url: "/hero-final.png",
                 width: 1200,
                 height: 630,
                 alt: "Lariza Ochoa AI Marketing",
@@ -61,9 +67,9 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Lariza Ochoa AI Marketing",
-        description: "Estrategias de Marketing con IA en México.",
-        images: ["/og-image.png"],
+        title: "Lariza Ochoa AI Marketing | IA para tu Negocio",
+        description: "Liderando el marketing con IA en México. Gestión de redes y automatizaciones estratégicas.",
+        images: ["/hero-final.png"],
     },
     robots: {
         index: true,

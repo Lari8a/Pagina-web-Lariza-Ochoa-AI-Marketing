@@ -29,16 +29,28 @@ export default function Hero() {
                             <div className="inline-flex items-center gap-2 bg-primary/5 text-primary font-bold text-[10px] uppercase tracking-[0.3em] px-4 py-1.5 rounded-full border border-primary/10">
                                 🚀 IA de Próxima Generación
                             </div>
-                            <h1 className="text-3xl md:text-5xl xl:text-6xl font-black text-navy leading-[0.9] italic tracking-tighter uppercase p-1">
-                                <span className="block whitespace-nowrap">Agencia de Marketing <span className="text-primary italic">AI</span></span>
-                                <span className="block whitespace-nowrap text-secondary">Resultados que Transforman</span>
-                                <span className="block whitespace-nowrap">tu presencia digital</span>
+                            <h1 className="text-[20px] xs:text-[22px] sm:text-3xl md:text-5xl xl:text-5xl font-black text-navy leading-[1.1] italic tracking-tighter uppercase p-1">
+                                <span className="block whitespace-nowrap">Convierte tus redes sociales</span>
+                                <span className="block whitespace-nowrap text-secondary">en una herramienta real</span>
+                                <span className="block whitespace-nowrap">para hacer crecer tu negocio</span>
                             </h1>
                         </div>
 
-                        <p className="reveal delay-100 text-sm md:text-lg text-navy/70 font-bold leading-snug max-w-md mx-auto lg:mx-0 text-justify">
-                            Impulsamos tu negocio con estrategias de inteligencia artificial, gestión de redes sociales y automatizaciones diseñadas para convertir.
+                        <p className="reveal delay-100 text-sm md:text-lg text-navy/70 font-bold leading-snug max-w-lg mx-auto lg:mx-0 text-justify">
+                            Combinamos estrategia, contenido e inteligencia artificial para convertir tu presencia digital en oportunidades reales de negocio.
                         </p>
+
+                        {/* Trust Bar */}
+                        <div className="reveal delay-150 pt-4 flex flex-col md:flex-row items-center justify-center lg:justify-start gap-4 md:gap-8 border-t border-navy/5 mt-8">
+                            <div className="flex items-center gap-2">
+                                <div className="w-2 h-2 rounded-full bg-primary" />
+                                <span className="text-[10px] uppercase tracking-widest font-black text-navy/60">+10 años de experiencia</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <div className="w-2 h-2 rounded-full bg-secondary" />
+                                <span className="text-[10px] uppercase tracking-widest font-black text-navy/60">Clientes en todo México</span>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Final Image Illustration - Contained and separated */}

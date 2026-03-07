@@ -10,7 +10,7 @@ export default function Footer() {
                 <div className="grid md:grid-cols-2 gap-12 mb-16 items-center">
                     <div className="space-y-6">
                         <Image
-                            src="/logo-v2.png"
+                            src="/logo-brand.png"
                             alt="Lariza Ochoa AI Marketing"
                             width={600}
                             height={270}
