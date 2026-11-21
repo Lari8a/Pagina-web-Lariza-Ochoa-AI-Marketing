@@ -1,45 +1,74 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { Share2, Bot, Globe, Compass } from "lucide-react";
 
 const services = [
     {
-        id: "analysis",
-        title: "Análisis de\nRedes Sociales",
-        icon: "/services/analysis-v8.png",
-        description: "Analizo a profundidad el estado actual de tus redes para detectar qué está funcionando, qué no y qué oportunidades de mejora existen.",
-        extra: "Utilizo herramientas de inteligencia artificial para evaluar contenido, interacción, optimización de perfil y posicionamiento frente a tu competencia.",
-        solution: "La falta de claridad y dirección en tu estrategia digital.",
-        color: "from-primary/20",
-    },
-    {
         id: "strategic-mgmt",
-        title: "Gestión Estratégica\nde Redes Sociales",
-        icon: "/services/strategy-v8.png",
-        description: "Me encargo de crear, estructurar y programar tu contenido para que tus redes se mantengan activas, profesionales y alineadas a tus objetivos de negocio.",
-        extra: "Optimizo tus perfiles y desarrollo comunicación estratégica para atraer clientes potenciales.",
-        solution: "Redes abandonadas, desordenadas o sin estrategia.",
-        color: "from-secondary/20",
+        title: "Gestión de redes sociales",
+        Icon: Share2,
+        description: "Creo, diseño y programo tu contenido en Facebook e Instagram, con un calendario mensual alineado a lo que quieres vender.",
+        bullets: [
+            "Calendario mensual de contenido",
+            "Diseño de posts, carruseles y reels",
+            "Programación y publicación",
+            "Optimización de tus perfiles",
+        ],
+        forYouIf: "tus redes están abandonadas, desordenadas o no sabes qué publicar.",
+        buttonText: "Cotiza tu gestión",
+        message: "Hola, Lari. Me interesa cotizar la gestión de redes sociales para mi negocio.",
+        cardBg: "bg-[#FFF3EE] border-[#FFD8C9]", // Coral suave
+        iconBg: "bg-[#FF6A3D] text-white",
     },
     {
         id: "smart-mgmt",
-        title: "Gestión Inteligente\nde Redes + AI",
-        icon: "/services/smart-v8.png",
-        description: "Llevo tu gestión a un nivel avanzado integrando contenido, atención a prospectos y automatización con inteligencia artificial.",
-        extra: "Implemento chatbots, respuestas automáticas y sistemas de seguimiento para que tu negocio atienda clientes 24/7, incluso cuando no estás disponible.",
-        solution: "Pérdida de prospectos, falta de seguimiento y saturación operativa.",
-        color: "from-primary/20",
+        title: "Chatbots y atención con IA",
+        Icon: Bot,
+        description: "Tu negocio responde a clientes en WhatsApp y redes las 24 horas, con respuestas automáticas y seguimiento a cada prospecto.",
+        bullets: [
+            "Chatbot con las preguntas frecuentes de tu negocio",
+            "Respuestas automáticas fuera de horario",
+            "Seguimiento a prospectos que no compraron",
+            "Ajustes durante el primer mes",
+        ],
+        forYouIf: "pierdes clientes porque tardas en contestar.",
+        buttonText: "Quiero mi chatbot",
+        message: "Hola, Lari. Me interesa un chatbot para atender a los clientes de mi negocio.",
+        cardBg: "bg-[#F4F0FF] border-[#DDD2FE]", // Lavanda suave
+        iconBg: "bg-[#7B3FE4] text-white",
     },
     {
         id: "web-design",
-        title: "Diseño de Páginas\nWeb & Landings",
-        icon: "/services/web-v8.png",
-        description: "Diseño sitios web modernos, rápidos y optimizados para conversión, estructurados estratégicamente para atraer y captar clientes.",
-        extra: "Integro formularios inteligentes, automatizaciones y herramientas de seguimiento para que tu página no solo informe… sino que genere oportunidades de venta.",
-        solution: "Negocios sin presencia profesional o con páginas que no convierten.",
-        color: "from-navy/10",
+        title: "Páginas web y landing pages",
+        Icon: Globe,
+        description: "Páginas rápidas, claras y pensadas para que el visitante te escriba o te compre.",
+        bullets: [
+            "Diseño adaptado a celular",
+            "Formularios y botón directo a WhatsApp",
+            "Textos escritos para vender",
+            "Listas para aparecer en Google",
+        ],
+        forYouIf: "no tienes página o la tuya no te genera mensajes.",
+        buttonText: "Cotiza tu página",
+        message: "Hola, Lari. Me interesa cotizar una página web o landing page para mi negocio.",
+        cardBg: "bg-[#FFF7EB] border-[#FDE2BA]", // Durazno suave
+        iconBg: "bg-[#F59E0B] text-white",
+    },
+    {
+        id: "consulting",
+        title: "Consultoría personalizada",
+        Icon: Compass,
+        description: "Reviso contigo qué funciona, qué puedes mejorar y por dónde te conviene empezar. Te propongo un plan claro que puedes poner en marcha conmigo o por tu cuenta.",
+        bullets: [
+            "Sesión de diagnóstico",
+            "Plan de acción por prioridades",
+        ],
+        forYouIf: "sabes que algo no está funcionando, pero no sabes qué.",
+        buttonText: "Agenda tu consultoría",
+        message: "Hola, Lari. Me interesa agendar una consultoría personalizada para mi negocio.",
+        cardBg: "bg-[#FDF2F4] border-[#F8D4DC]", // Rosa empolvado suave
+        iconBg: "bg-[#E11D48] text-white",
     },
 ];
 
@@ -56,87 +85,82 @@ export default function Services() {
         return () => observer.disconnect();
     }, []);
 
-    const whatsappUrl = "https://wa.me/523312181168";
+    const whatsappBaseUrl = "https://wa.me/523353313224";
 
     return (
-        <section id="servicios" ref={sectionRef} className="py-24 bg-white relative overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6 relative z-10">
-                <div className="text-center max-w-2xl mx-auto mb-20 space-y-4">
-                    <div className="reveal inline-flex items-center gap-2 bg-primary/5 text-primary font-bold text-[10px] uppercase tracking-[0.3em] px-4 py-1.5 rounded-full border border-primary/10">
-                        ⚡ Propuesta de Valor
+        <section id="servicios" ref={sectionRef} className="py-16 md:py-24 bg-white relative overflow-hidden">
+            <div className="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
+                <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16 space-y-3 sm:space-y-4">
+                    <div className="reveal inline-flex items-center gap-2 bg-primary/10 text-primary font-extrabold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full border border-primary/20">
+                        ⚡ Propuesta de valor
                     </div>
-                    <h2 className="reveal delay-100 text-4xl md:text-5xl font-black text-navy uppercase italic tracking-tighter leading-tight">
-                        Servicios <span className="text-primary italic">IA</span> de Alto Impacto
+                    <h2 className="reveal delay-100 text-3xl md:text-5xl font-black text-navy tracking-tight leading-tight">
+                        Servicios <span className="text-primary">IA</span> de Alto Impacto
                     </h2>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
-                    {services.map((service, i) => (
-                        <div
-                            key={service.id}
-                            className={`reveal delay-${(i + 1) * 100} group relative bg-gray-light/30 p-8 md:p-14 rounded-[3rem] border border-navy/5 hover:border-primary/20 transition-all duration-700 hover:shadow-2xl hover:shadow-primary/5 flex flex-col gap-8 overflow-hidden`}
-                        >
-                            {/* Decorative Background Gradient */}
-                            <div className={`absolute top-0 right-0 w-64 h-64 bg-gradient-to-br ${service.color} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-full blur-3xl -mr-20 -mt-20`} />
-
-                            {/* Header: Icon next to Title */}
-                            <div className="relative z-10 flex items-center gap-6 md:gap-8">
-                                <div className="flex-shrink-0">
-                                    <div className="relative w-20 h-20 md:w-28 md:h-28 transform transition-all duration-700 group-hover:scale-110 group-hover:rotate-3">
-                                        <Image
-                                            src={service.icon}
-                                            alt={`Servicio de ${service.title} - Lariza AI Marketing`}
-                                            width={112}
-                                            height={112}
-                                            className="w-full h-full object-contain filter drop-shadow-md"
-                                            priority
-                                        />
-                                    </div>
-                                </div>
-                                <h3 className="text-2xl md:text-3xl font-black text-navy uppercase italic leading-[1.1] tracking-tighter whitespace-pre-line">
-                                    {service.title}
-                                </h3>
-                            </div>
-
-                            {/* Description below */}
-                            <div className="relative z-10 space-y-6">
-                                <div className="space-y-5 text-navy/70 font-medium leading-relaxed text-sm md:text-base">
-                                    <p>
-                                        {service.description}
-                                    </p>
-                                    <p className="text-xs md:text-sm text-navy/50 italic border-l-2 border-primary/30 pl-6 py-2">
-                                        {service.extra}
-                                    </p>
-                                </div>
-
-                                <div className="pt-6 border-t border-navy/5 space-y-4">
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-8 h-8 rounded-lg bg-navy/5 flex items-center justify-center">
-                                            <span className="text-[10px] font-black text-navy/40">?</span>
+                <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-stretch">
+                    {services.map((service, i) => {
+                        const whatsappUrl = `${whatsappBaseUrl}?text=${encodeURIComponent(service.message)}`;
+                        const IconComponent = service.Icon;
+                        return (
+                            <div
+                                key={service.id}
+                                className={`reveal delay-${(i + 1) * 100} group relative ${service.cardBg} p-6 sm:p-8 md:p-10 rounded-3xl sm:rounded-[2.5rem] border transition-all duration-500 hover:shadow-xl flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden h-full`}
+                            >
+                                <div className="relative z-10 flex flex-col gap-5 sm:gap-6 flex-1">
+                                    {/* Header: Distinct Icon next to Title */}
+                                    <div className="flex items-center gap-4 sm:gap-5">
+                                        <div className={`w-13 h-13 sm:w-16 sm:h-16 p-3 sm:p-0 rounded-2xl ${service.iconBg} shadow-md flex items-center justify-center flex-shrink-0 transition-transform duration-500 group-hover:scale-105`}>
+                                            <IconComponent className="w-7 h-7 sm:w-8 sm:h-8" strokeWidth={2.2} />
                                         </div>
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-navy/50">¿Qué soluciona?</span>
+                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-navy leading-snug tracking-tight">
+                                            {service.title}
+                                        </h3>
                                     </div>
-                                    <p className="text-navy font-bold text-base md:text-lg leading-tight">
-                                        {service.solution}
-                                    </p>
+
+                                    {/* Description and Bullets */}
+                                    <div className="space-y-5 sm:space-y-6 flex-1 flex flex-col justify-between">
+                                        <div className="space-y-4 text-navy font-medium leading-relaxed text-[15px] sm:text-base">
+                                            <p>
+                                                {service.description}
+                                            </p>
+                                            <ul className="space-y-2.5 pl-1">
+                                                {service.bullets.map((bullet, idx) => (
+                                                    <li key={idx} className="flex items-start gap-3 text-navy text-sm md:text-base font-medium">
+                                                        <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                                                        <span>{bullet}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+
+                                        <div className="pt-4 sm:pt-5 border-t border-navy/10">
+                                            <p className="text-navy text-sm md:text-base leading-relaxed">
+                                                <strong className="font-black text-navy">Para ti si:</strong>{" "}
+                                                <span className="text-navy font-medium">{service.forYouIf}</span>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div className="pt-8">
+                                {/* Footer Button aligned to bottom */}
+                                <div className="relative z-10 pt-1 sm:pt-2 mt-auto">
                                     <a
                                         href={whatsappUrl}
                                         target="_blank"
-                                        className="inline-flex items-center gap-3 text-[11px] font-black text-navy uppercase tracking-[0.2em] group/btn transition-all duration-300 hover:text-primary"
+                                        rel="noopener noreferrer"
+                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 sm:gap-3 bg-primary hover:bg-navy text-white font-extrabold text-xs uppercase tracking-wider px-5 sm:px-8 py-4 min-h-[50px] rounded-2xl shadow-lg shadow-primary/25 hover:shadow-navy/20 hover:-translate-y-0.5 active:scale-95 transition-all duration-300 text-center"
                                     >
-                                        <span className="relative">
-                                            Comienza ahora
-                                            <span className="absolute -bottom-1 left-0 w-full h-px bg-current transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-300" />
-                                        </span>
-                                        <ArrowRight size={16} className="transform transition-transform group-hover/btn:translate-x-2" />
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
+                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                                        </svg>
+                                        <span>{service.buttonText}</span>
                                     </a>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </div>
         </section>

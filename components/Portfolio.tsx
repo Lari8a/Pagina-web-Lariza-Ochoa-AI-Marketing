@@ -4,14 +4,14 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 
 const projects = [
-    { title: "Gestión Estratégica 1", category: "Social Media", image: "/analysis.png" },
-    { title: "Gestión Estratégica 2", category: "Social Media", image: "/smart.png" },
-    { title: "Gestión Estratégica 3", category: "Social Media", image: "/strategy.png" },
-    { title: "Gestión Estratégica 4", category: "Social Media", image: "/web.png" },
-    { title: "Gestión Estratégica 5", category: "Social Media", image: "/4.png" },
-    { title: "Gestión Estratégica 6", category: "Social Media", image: "/5.png" },
-    { title: "Gestión Estratégica 7", category: "Social Media", image: "/68.png" },
-    { title: "Gestión Estratégica 8", category: "Social Media", image: "/8.png" },
+    { name: "CESH", category: "Educativo", image: "/analysis.png" },
+    { name: "C14", category: "Autopartes", image: "/smart.png" },
+    { name: "Dr. Almendra", category: "Medicina", image: "/strategy.png" },
+    { name: "Instituto Vitalista", category: "Medicina alternativa", image: "/web.png" },
+    { name: "Normatika", category: "Consultoría", image: "/4.png" },
+    { name: "Las Fresquitas", category: "Alimentos y bebidas", image: "/5.png" },
+    { name: "Femme", category: "Medicina", image: "/68.png" },
+    { name: "Home Fitness", category: "Deportes", image: "/8.png" },
 ];
 
 export default function Portfolio() {
@@ -29,43 +29,48 @@ export default function Portfolio() {
 
     return (
         <section id="portafolio" ref={sectionRef} className="section-padding bg-gray-light relative overflow-hidden">
-            <div className="max-w-[1200px] mx-auto px-6 relative z-10">
+            <div className="max-w-[1200px] mx-auto px-0 sm:px-2 relative z-10">
                 {/* Header */}
-                <div className="text-center mb-16 space-y-4">
-                    <div className="reveal inline-flex items-center gap-2 bg-secondary/5 text-secondary font-bold text-xs uppercase tracking-[0.3em] px-5 py-2 rounded-full border border-secondary/10">
+                <div className="text-center mb-12 md:mb-16 space-y-3 sm:space-y-4">
+                    <div className="reveal inline-flex items-center gap-2 bg-secondary/10 text-secondary font-extrabold text-xs uppercase tracking-wider px-5 py-2 rounded-full border border-secondary/20">
                         Portafolio
                     </div>
-                    <h2 className="reveal delay-100 section-title !text-navy">
-                        Casos de <span className="text-primary italic">Éxito Digital</span>
+                    <h2 className="reveal delay-100 text-3xl md:text-5xl font-black text-navy tracking-tight leading-tight">
+                        Negocios que ya <span className="text-primary">confían en mí</span>
                     </h2>
-                    <p className="reveal delay-200 text-gray-dark text-lg font-medium max-w-2xl mx-auto">
+                    <p className="reveal delay-200 text-navy/80 text-base sm:text-lg font-medium max-w-2xl mx-auto">
                         Gestión estratégica de redes sociales para marcas con propósito.
                     </p>
                 </div>
 
                 {/* Advanced Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-6 md:gap-8">
                     {projects.map((project, i) => (
                         <div
                             key={i}
-                            className={`reveal delay-${(i % 4 + 1) * 100} group relative overflow-hidden rounded-2xl bg-navy/5 aspect-[4/5]`}
+                            className={`reveal delay-${(i % 4 + 1) * 100} group flex flex-col gap-3 max-w-sm mx-auto sm:max-w-none w-full`}
                         >
-                            <Image
-                                src={project.image}
-                                alt={`Proyecto de ${project.title} - Caso de éxito en ${project.category} gestionado por Lariza Ochoa AI Marketing`}
-                                fill
-                                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 220px"
-                            />
+                            <div className="relative overflow-hidden rounded-2xl bg-navy/5 aspect-[4/5] shadow-sm">
+                                <Image
+                                    src={project.image}
+                                    alt={`${project.name} - ${project.category} | Contenido semanal en Facebook e Instagram por Lariza Ochoa AI Marketing`}
+                                    fill
+                                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 280px"
+                                />
+                            </div>
 
-                            {/* Overlay on Hover */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
-                                <span className="text-[10px] uppercase tracking-widest text-primary font-black mb-1">
-                                    {project.category}
-                                </span>
-                                <h3 className="text-white font-black text-sm uppercase tracking-tighter">
-                                    {project.title}
+                            {/* Text below image */}
+                            <div className="px-1 space-y-0.5">
+                                <h3 className="font-bold text-navy text-base leading-snug">
+                                    {project.name}
                                 </h3>
+                                <p className="text-primary font-semibold text-sm leading-snug">
+                                    {project.category}
+                                </p>
+                                <p className="text-navy/80 text-xs sm:text-sm leading-snug font-medium">
+                                    Contenido semanal en Facebook e Instagram
+                                </p>
                             </div>
                         </div>
                     ))}

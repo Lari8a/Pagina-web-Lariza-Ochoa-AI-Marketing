@@ -15,31 +15,33 @@ export const viewport: Viewport = {
     initialScale: 1,
 };
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://larizaochoa.ai";
+
 export const metadata: Metadata = {
-    metadataBase: new URL("https://larizaochoa.ai"), // Placeholder domain
+    metadataBase: new URL(siteUrl),
     icons: {
         icon: "/icon-brand.png",
         shortcut: "/icon-brand.png",
         apple: "/icon-brand.png",
     },
     title: {
-        default: "Lariza Ochoa AI Marketing | Estrategias con IA en México",
-        template: "%s | Lariza Ochoa AI Marketing"
+        default: "Marketing digital en Guadalajara | Lariza Ochoa",
+        template: "%s | Lariza Ochoa"
     },
     description:
-        "Transforma tu negocio con marketing de IA. Expertos en gestión de redes sociales, automatizaciones inteligentes y diseño web estratégico en México.",
+        "Gestiono tus redes sociales, diseño tu página web y automatizo tu atención por WhatsApp con IA. Desde Guadalajara, trabajo con negocios en todo México.",
     keywords: [
-        "marketing inteligencia artificial méxico",
-        "agencia ia guadalajara",
-        "gestión de redes sociales estratégica",
+        "marketing digital en guadalajara",
+        "gestión de redes sociales guadalajara",
+        "diseño de páginas web y landing pages",
         "chatbots para negocios méxico",
-        "automatización de marketing ia",
+        "automatización de whatsapp con ia",
+        "consultoría de marketing digital",
         "lariza ochoa marketing",
-        "marketing digital con ia",
-        "diseño web con inteligencia artificial"
+        "marketing digital con ia méxico"
     ],
     authors: [{ name: "Lariza Ochoa" }],
-    creator: "Lariza Ochoa AI Marketing",
+    creator: "Lariza Ochoa",
     publisher: "Lariza Ochoa AI Marketing",
     formatDetection: {
         email: false,
@@ -50,26 +52,26 @@ export const metadata: Metadata = {
         canonical: "/",
     },
     openGraph: {
-        title: "Lariza Ochoa AI Marketing | Marketing con IA que genera resultados",
-        description: "Potenciamos tu presencia digital con Inteligencia Artificial. Estrategias avanzadas en redes sociales y automatización.",
-        url: "https://larizaochoa.ai",
+        title: "Marketing digital en Guadalajara | Lariza Ochoa",
+        description: "Gestiono tus redes sociales, diseño tu página web y automatizo tu atención por WhatsApp con IA. Desde Guadalajara, trabajo con negocios en todo México.",
+        url: siteUrl,
         siteName: "Lariza Ochoa AI Marketing",
         locale: "es_MX",
         type: "website",
         images: [
             {
-                url: "/hero-final.png",
-                width: 1200,
-                height: 630,
-                alt: "Lariza Ochoa AI Marketing",
+                url: "/lariza-ochoa.jpg",
+                width: 576,
+                height: 1024,
+                alt: "Lariza Ochoa - Marketing digital con IA en Guadalajara para todo México",
             },
         ],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Lariza Ochoa AI Marketing | IA para tu Negocio",
-        description: "Liderando el marketing con IA en México. Gestión de redes y automatizaciones estratégicas.",
-        images: ["/hero-final.png"],
+        title: "Marketing digital en Guadalajara | Lariza Ochoa",
+        description: "Gestiono tus redes sociales, diseño tu página web y automatizo tu atención por WhatsApp con IA. Desde Guadalajara, trabajo con negocios en todo México.",
+        images: ["/lariza-ochoa.jpg"],
     },
     robots: {
         index: true,
